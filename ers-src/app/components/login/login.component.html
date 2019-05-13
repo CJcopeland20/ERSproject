@@ -1,0 +1,33 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+
+        <h1>Login</h1>
+        <p *ngIf="lastStatus === 400">Username or password is incorrect.</p>
+        <p *ngIf="lastStatus === 500">Unknown server error occurred.</p>
+        <p *ngIf="lastStatus === 0">Server unreachable.</p>
+
+        <form name="login-form">
+        <div class="textbox">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Username" name="username" [(ngModel)]="username">
+        </div>
+
+        <div class="textbox">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            <input type="password" placeholder="Password" name="password"[(ngModel)]="password">
+        </div>
+    
+        <input class="btn" type="submit" name="submit"  (click)="submit()" value="Login">
+        </form>
+
+        <router-outlet></router-outlet>
+    </div>
+</body>
+ 
+

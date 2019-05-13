@@ -1,0 +1,64 @@
+<nav>
+    <input id="button" type="button" routerLink="" value="Log Out" (click)="clearStorage()">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/add" class="active">Add Ticket</a>    
+    <a routerLink="/past">Past Ticket</a>
+    <a routerLink="/update" *ngIf="managerValid()">Manage Ticket</a>            
+</nav>
+
+<div class="content">
+    <div class="ticket-box">
+        <div class="add-box">
+            <form name="add-ticket">
+                <div class="row">
+
+                    <div class="col-25">
+                        <label for="country">Date of expense:</label>
+                    </div>
+                
+                    <div class="textbox">
+                        <input type="date" name="date" [(ngModel)]="date">
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+
+                    <div class="col-25">
+                        <label for="country">Reimbursment Type:</label>
+                    </div>
+        
+                    <div class="textbox">
+                        <select id="reimb_type" name="reimb_type" [(ngModel)]="type">
+                            <option value="1">Lodging</option>
+                            <option value="2">Travel</option>
+                            <option value="3">Food</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </div>
+        
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="desc">Description:</label>
+                    </div>
+                    <textarea name="description" placeholder="Brief description of the transaction..." [(ngModel)]="description"></textarea>
+                </div>  
+
+
+                <div class="row">
+                    <div class="col-25">
+                        <label id="cost">Amount Paid:</label>
+                    </div>
+                    <div class="textbox">
+                        <input type="text" name="cost" placeholder="$..." [(ngModel)]="cost">
+                    </div>
+                </div>
+
+                <input class="btn" type="submit" name="submit" [disabled]="!formValidation()" routerLink="home" (click)="submit()" value="Login">
+            </form>
+            <router-outlet></router-outlet>    
+        </div>
+     </div>
+</div> 

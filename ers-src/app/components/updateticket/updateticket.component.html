@@ -1,0 +1,37 @@
+<nav>
+  <input id="button" type="button" routerLink="" value="Log Out" (click)="clearStorage()">
+  <a routerLink="/home">Home</a>
+  <a routerLink="/add">Add Ticket</a>    
+  <a routerLink="/past">Past Ticket</a>
+  <a routerLink="/update" class="active">Manage Ticket</a>            
+</nav>
+
+<div class="content">
+    <div class="table-box">
+      
+      <table class="tickets">
+        <tr>
+        <th colspan="9">Reimbursements</th> 
+      </tr>
+        <tr>
+          <th>Reimburesment ID</th>
+          <th>Reimburesment Amount</th>
+          <th>Submitted</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Type</th>
+        </tr>
+        <tr *ngFor="let item of ticketArray" >
+          <td *ngIf="pending(item)">{{ item.id }}</td>
+          <td *ngIf="pending(item)">{{ item.cost }}</td>
+          <td *ngIf="pending(item)">{{ item.submitted }}</td>
+          <td *ngIf="pending(item)">{{ item.description }}</td>
+          <td *ngIf="pending(item)">{{ item.status }}</td>
+          <td *ngIf="pending(item)">{{ item.type }}</td> 
+          <td *ngIf="pending(item)"><input type="button" (click)="update(2, item.id)" value="Approve"></td>
+          <td *ngIf="pending(item)"><input type="button" (click)="update(3, item.id)" value="Deny"></td>
+        </tr>
+      </table>
+
+    </div>
+</div>

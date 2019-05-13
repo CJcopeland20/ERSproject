@@ -1,0 +1,73 @@
+<nav>
+    <input id="button" type="button" routerLink="" value="Log Out" (click)="clearStorage()">         
+</nav>
+
+
+<header class="bg">
+        <div class="content">
+
+            <div class="subcontent">
+                <div class="top">
+                    <img src="https://cdn3.iconfinder.com/data/icons/education-38/49/118-512.png">
+                </div>
+                <div class="belt">
+                        <a routerLink="/past">View past tickets</a>
+                </div>
+                <div class="bottom">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Tempora nostrum labore adipisci distinctio
+                         ducimus obcaecati commodi quam in illo, animi,
+                          ad iste fuga maxime molestias placeat accusamus 
+                          vero sed ipsa?</p>
+                </div>
+            </div>
+    
+
+          
+            <div class="subcontent">
+             
+                <div class="top">
+                    
+                    <img src="https://cdn1.iconfinder.com/data/icons/business-files/512/add_2-512.png">
+                    
+                </div>
+                
+                <div class="belt"> 
+                   
+                    <a routerLink="/add">Add Ticket</a>    
+                    
+                </div>
+            
+                <div class="bottom">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Tempora nostrum labore adipisci distinctio
+                                 ducimus obcaecati commodi quam in illo, animi,
+                                  ad iste fuga maxime molestias placeat accusamus 
+                                  vero sed ipsa?</p>
+                </div>
+                <app-addticket></app-addticket>
+            </div>
+        
+      
+            <div class="subcontent" *ngIf="managerValid()">
+                <div class="top">
+                    <img src="https://cdn2.iconfinder.com/data/icons/inverticons-stroke-vol-1/32/file_document_sync_synchronization_reload_refresh_update-512.png">
+                </div>
+                <div class="belt">
+               
+                    <a routerLink="/update">Manage Tickets</a>
+                
+                </div>
+                <div class="bottom">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                                elit. Tempora nostrum labore adipisci distinctio
+                                 ducimus obcaecati commodi quam in illo, animi,
+                                  ad iste fuga maxime molestias placeat accusamus 
+                                  vero sed ipsa?</p>
+                </div>
+            </div>
+      
+            
+        </div>
+
+    </header>

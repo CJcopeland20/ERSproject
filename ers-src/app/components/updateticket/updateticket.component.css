@@ -1,0 +1,69 @@
+.content{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: left;
+    background-color: #333;
+}
+  
+nav input, nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+nav input:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+nav input.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+.table-box{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+
+}
+
+.tickets {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tickets td, .tickets th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tickets tr:nth-child(){
+    background: none;
+}
+
+.tickets tr:hover{
+    background: #7D7D7D;
+}
+
+.tickets th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #51eeda;
+    color: white;
+    
+}

@@ -1,0 +1,39 @@
+<nav>
+  <input id="button" type="button" routerLink="" value="Log Out" (click)="clearStorage()">
+  <a routerLink="/home">Home</a>
+  <a routerLink="/add">Add Ticket</a>    
+  <a routerLink="/past" class="active">Past Ticket</a>
+  <a routerLink="/update"></a>            
+</nav>
+
+<div class="content">
+    <div class="table-box">
+      
+      <table class="tickets">
+        <tr>
+        <th colspan="9">Reimbursements</th> 
+      </tr>
+        <tr>
+          <th>Reimburesment ID</th>
+          <th>Reimburesment Amount</th>
+          <th>Submitted</th>
+          <th>Resolved</th>
+          <th>Description</th>
+          <th>Resolver</th>
+          <th>Status</th>
+          <th>Type</th>
+        </tr>
+        <tr *ngFor="let item of ticketArray">
+          <td>{{ item.id }}</td>
+          <td>{{ item.cost }}</td>
+          <td>{{ item.submitted }}</td>
+          <td>{{ item.resolved }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.resolver }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.type }}</td> 
+        </tr>
+      </table>
+
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./addtickets.css">
+</head>
+<body>
+    <header class="bg">
+    <div class="content">
+            <div class="ticket-box">
+                <div class="left-box">
+                  <h1>Ticket Info</h1>
+                    
+                  <div>Reimbursment Type:</div>
+                <form method="post" action="addServlet">
+                  <select name="reimburs_type">
+                        <option value="1">Lodging</option>    
+                        <option value="2">Travel</option>
+                        <option value="3">Food</option>
+                        <option value="4">Other</option>
+                    </select>
+
+                    <div>
+                        <textarea rows="10" cols="40" name="description" placeholder="Please provide a brief description of the transaction..."></textarea>
+                    </div>  
+
+                    
+                    Upload Reciept: <input class="file" type="file" name="img" value="File Upload">
+
+                    <div class="textbox">
+                            <input type="text" name="cost" placeholder="Amount">
+                       </div>
+    
+                    <input class="btn" type="submit" name="submit" value="Submit Ticket">
+                      </form>     
+                </div>
+
+
+                <div class="right-box">
+                    <h1>Your input</h1>
+
+
+
+
+                </div>
+            </div>
+        </div> 
+    </header>
+</body>
+</html>
